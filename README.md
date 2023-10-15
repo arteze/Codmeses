@@ -4,7 +4,7 @@ Codificar nombres de meses y días de la semana a base64.
 # Lo que se intenta codificar
 Meses y días de la semana:
 ```
-enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre domingo lunes martes miércoles jueves viernes sábado"
+enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre domingo lunes martes miércoles jueves viernes sábado
 ```
 La memotécnica para saber la cantidad de días de los meses pasado de base 3 a la misma base que tenga el abecedario codificado restado 1, en este caso 23.
 
