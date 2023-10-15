@@ -1,5 +1,4 @@
 function gen_abc(){
-	var j = 0
 	var abc = Array(26).fill().map((j,i)=>String.fromCharCode(65+i)).join("")
 	return abc
 }
