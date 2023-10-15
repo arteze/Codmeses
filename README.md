@@ -16,7 +16,7 @@ Febrero pasa de 32 a 28 (notar que empieza en 12 y se repite 10101):
 > BDCCD
 ```
 
-# Los meses a base64
+# Transformación del abecedario
 La comparación entre el abecesario normal, haciendo que las vocales queden en el mismo lugar, mientras que algunas consonantes cambian de lugar.
 ```
 Abecedario normal: 'A BCD E FGH I JKLMN O PQRST U VWX'
@@ -31,7 +31,7 @@ Abecedario nuevo:  'ABCDEFG IJ ILMN P ROSTUV  YZUÁÉ'
 Abecedario con faltantes:  H  K    O Q      WX   ÁÉ = HKOQWXÁÉ
 ```
 
-Base64:
+# Meses al nuevo abecedario:
 Codificación de los meses, semanas y bisiestos con el nuevo abecedario:
 ```
 ELENOXFEBNENOXKANTOXABNIJXKASOXHULIOXHUJIOXAGOPQOXPEMQIEKBNEXOCQUBNEXLORIEKBNEXDICIEKBNEXDOKILGOXJULEPXKANQEPXKIWNCOJEPXHUEREPXRIENLEPXPVBADOXBDCCD
@@ -53,8 +53,7 @@ PEMQIEKBNE
  DICIEKBNE
 ```
 
-Transformación a base64:
+# Transformación a base64:
 ```
 vS1UUlluGCqq2ZioYx3GehHWVC1O8rv8+gOvYC/viwgeLCo8g6W8o8DOwC6nrZefIoWUrOpTmr3Lnw6x4dQIBkZl+5lwd71J0jBEsp4qXbw2iDaz
 ```
-
