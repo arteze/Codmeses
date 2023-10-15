@@ -1,3 +1,10 @@
+function abc_faltan(nabc){
+	var j = 0
+	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
+	var f = [...abc].map(x=>nabc.indexOf(x)==-1?x:abc.indexOf(x)==-1?x:"").join("")
+	var g = [...nabc].map(x=>abc.indexOf(x)==-1?x:"").join("")
+	return f+g
+}
 function codificar(a,b){
 	var i = 0, j = 0, r = [], rabc = [], nt = []
 	var c = a.toUpperCase()
@@ -40,13 +47,6 @@ function bigint_a_b64(bi){
 	var s = arr.join("")
 	var b64 = btoa(s)
 	return b64
-}
-function abc_faltan(nabc){
-	var j = 0
-	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
-	var f = [...abc].map(x=>nabc.indexOf(x)==-1?x:abc.indexOf(x)==-1?x:"").join("")
-	var g = [...nabc].map(x=>abc.indexOf(x)==-1?x:"").join("")
-	return f+g
 }
 function meses_a_base64(a,b){
 	var codificado = codificar(a,b)
