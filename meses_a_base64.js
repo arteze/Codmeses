@@ -1,6 +1,10 @@
-function abc_faltan(nabc){
+function gen_abc(){
 	var j = 0
 	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
+	return abc
+}
+function abc_faltan(nabc){
+	var abc = gen_abc()
 	var f = [...abc].map(x=>nabc.indexOf(x)==-1?x:abc.indexOf(x)==-1?x:"").join("")
 	var g = [...nabc].map(x=>abc.indexOf(x)==-1?x:"").join("")
 	return f+g
