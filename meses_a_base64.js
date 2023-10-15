@@ -41,11 +41,18 @@ function bigint_a_b64(bi){
 	var b64 = btoa(s)
 	return b64
 }
+function abc_faltan(nabc){
+	var j = 0
+	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
+	var f = [...abc].map(x=>nabc.indexOf(x)==-1?x:abc.indexOf(x)==-1?x:"").join("")
+	var g = [...nabc].map(x=>abc.indexOf(x)==-1?x:"").join("")
+	return f+g
+}
 function meses_a_base64(a,b){
 	var codificado = codificar(a,b)
 	var bi = cod_a_bigint(codificado[2])
 	var b64 = bigint_a_b64(bi)
-	var nabc = codificado[0]
+	var nabc = abc_faltan(codificado[0])
 	return [nabc,b64]
 }
 var a = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre domingo lunes martes miércoles jueves viernes sábado"
