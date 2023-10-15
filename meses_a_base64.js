@@ -1,6 +1,6 @@
 function gen_abc(){
 	var j = 0
-	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
+	var abc = Array(26).fill().map((j,i)=>String.fromCharCode(65+i)).join("")
 	return abc
 }
 function abc_faltan(nabc){
@@ -11,8 +11,8 @@ function abc_faltan(nabc){
 }
 function codificar(a,b){
 	var i = 0, j = 0, r = [], rabc = [], nt = [], v = "AEIOU "
-	var abc = gen_abc()
 	var c = b.toUpperCase()
+	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
 	var rev = [...v].map(x=>RegExp(`(.*)(${x})(.*)`,"g"))
 	var nabc = [...new Set(c)].sort().join("")
 	rev.map(x=>(nabc=nabc.replace(rev[i++],"$1$3$2"))&&null)
