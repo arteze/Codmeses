@@ -45,8 +45,8 @@ function meses_a_base64(a,b){
 	var codificado = codificar(a,b)
 	var bi = cod_a_bigint(codificado[2])
 	var b64 = bigint_a_b64(bi)
-	console.log(codificado)
-	return b64
+	var nabc = codificado[0]
+	return [nabc,b64]
 }
 var a = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre domingo lunes martes miércoles jueves viernes sábado"
 var b = "121010110101"
