@@ -40,9 +40,10 @@ function cod_a_bigint(x){
 }
 function bigint_a_b64(bi){
 	var arr = []
+	var base = 256n
 	while(bi>0){
-		arr.unshift( String.fromCharCode(+(""+(bi%256n))) )
-		bi /= 256n
+		arr.unshift( String.fromCharCode(+(""+(bi%base))) )
+		bi /= base
 	}
 	var s = arr.join("")
 	var b64 = btoa(s)
