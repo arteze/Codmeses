@@ -6,13 +6,13 @@ function abc_faltan(nabc){
 	return f+g
 }
 function codificar(a,b){
-	var i = 0, j = 0, r = [], rabc = [], nt = []
+	var i = 0, j = 0, r = [], rabc = [], nt = [], v = "AEIOU "
 	var c = a.toUpperCase()
 	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
-	var rev = [..." AEIOU"].map(x=>RegExp(`(.*)(${x})(.*)`,"g"))
+	var rev = [...v].map(x=>RegExp(`(.*)(${x})(.*)`,"g"))
 	var nabc = [...new Set(c)].sort().join("")
 	rev.map(x=>(nabc=nabc.replace(rev[i++],"$1$3$2"))&&null)
-	nabc = eval(nabc.replace(/([^AEIOU]+)([AEIOU\s]+)/g,"['$1','$2']"))
+	nabc = eval(nabc.replace(new RegExp(`([^${v}]+)([${v}\s]+)`,"g"),"['$1','$2']"))
 	var p = [..."9cfkpuz"].map(x=>parseInt(x,36)-9)
 	for(var k=0;k<p.length-1;++k){
 		var t = nabc[1][k]
