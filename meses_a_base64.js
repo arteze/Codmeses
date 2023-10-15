@@ -7,7 +7,7 @@ function abc_faltan(nabc){
 }
 function codificar(a,b){
 	var i = 0, j = 0, r = [], rabc = [], nt = [], v = "AEIOU "
-	var c = a.toUpperCase()
+	var c = b.toUpperCase()
 	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
 	var rev = [...v].map(x=>RegExp(`(.*)(${x})(.*)`,"g"))
 	var nabc = [...new Set(c)].sort().join("")
@@ -21,7 +21,7 @@ function codificar(a,b){
 	}
 	rabc = rabc.join("").toUpperCase()
 	var m = [...c].map(x=>nt.push([rabc.indexOf(x),x]))
-	var n = [...parseInt(b,3).toString(rabc.length-1)]
+	var n = [...parseInt(a,3).toString(rabc.length-1)]
 		.map(x=>(10+parseInt(x,36)).toString(36))
 		.join("")
 		.toUpperCase()
@@ -56,6 +56,6 @@ function meses_a_base64(a,b){
 	var nabc = abc_faltan(codificado[0])
 	return [nabc,b64]
 }
-var a = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre domingo lunes martes miércoles jueves viernes sábado"
-var b = "121010110101"
+var a = "121010110101"
+var b = "enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre domingo lunes martes miércoles jueves viernes sábado"
 console.log(meses_a_base64(a,b))
