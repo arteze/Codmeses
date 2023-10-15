@@ -36,6 +36,23 @@ Codificación de los meses, semanas y bisiestos con el nuevo abecedario:
 ```
 ELENOXFEBNENOXKANTOXABNIJXKASOXHULIOXHUJIOXAGOPQOXPEMQIEKBNEXOCQUBNEXLORIEKBNEXDICIEKBNEXDOKILGOXJULEPXKANQEPXKIWNCOJEPXHUEREPXRIENLEPXPVBADOXBDCCD
 ```
+# Partiendo la codificación por la X
+Se usa parte la codificación por la letra X.
+```
+     ELENO    DOKILGO  BDCCD
+   FEBNENO      JULEP
+     KANTO     KANQEP
+     ABNIJ  KIWNCOJEP
+      KASO     HUEREP
+     HULIO    RIENLEP
+     HUJIO     PVBADO
+    AGOPQO
+PEMQIEKBNE
+   OCQUBNE
+ LORIEKBNE
+ DICIEKBNE
+```
+
 Transformación a base64:
 ```
 vS1UUlluGCqq2ZioYx3GehHWVC1O8rv8+gOvYC/viwgeLCo8g6W8o8DOwC6nrZefIoWUrOpTmr3Lnw6x4dQIBkZl+5lwd71J0jBEsp4qXbw2iDaz
