@@ -28,12 +28,12 @@ function codificar(a,texto){
 	var nt = []
 	var may = texto.toUpperCase()
 	var rabc = ordenar_vocales(may)
-	var m = [...may].map(x=>nt.push([rabc.indexOf(x),x]))
+	var m = [...may].map(x=>nt.push(rabc.indexOf(x)))
 	var n = [...parseInt(a,3).toString(rabc.length-1)]
 		.map(x=>(10+parseInt(x,36)).toString(36))
 		.join("")
 		.toUpperCase()
-	var o = nt.map(x=> (10+x[0]).toString(36) ).join("").toUpperCase()
+	var o = nt.map(x=> (10+x).toString(36) ).join("").toUpperCase()
 	var p = o + (10+rabc.indexOf(" ")).toString(36).toUpperCase() + n
 	return [rabc,n,p]
 }
