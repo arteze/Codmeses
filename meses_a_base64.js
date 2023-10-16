@@ -25,7 +25,7 @@ function ordenar_vocales(dabc){
 	return rabc
 }
 function codificar(a,texto){
-	var i = 0, j = 0, nt = [], v = "AEIOU "
+	var nt = []
 	var may = texto.toUpperCase()
 	var rabc = ordenar_vocales(may)
 	var m = [...may].map(x=>nt.push([rabc.indexOf(x),x]))
