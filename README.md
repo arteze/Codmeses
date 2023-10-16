@@ -32,7 +32,7 @@ Abecedario con faltantes:  H  K    O Q      WX   ÁÉ = HKOQWXÁÉ
 ```
 
 # Meses al nuevo abecedario:
-Codificación de los meses, semanas y bisiestos con el nuevo abecedario:
+Codificación de los meses, semanas y cantidad de días de cada mes (BDCCD) con el nuevo abecedario:
 ```
 ELENOXFEBNENOXKANTOXABNIJXKASOXHULIOXHUJIOXAGOPQOXPEMQIEKBNEXOCQUBNEXLORIEKBNEXDICIEKBNEXDOKILGOXJULEPXKANQEPXKIWNCOJEPXHUEREPXRIENLEPXPVBADOXBDCCD
 ```
