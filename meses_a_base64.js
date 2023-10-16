@@ -8,12 +8,11 @@ function abc_faltan(nabc){
 	var g = [...nabc].map(x=>abc.indexOf(x)==-1?x:"").join("")
 	return f+g
 }
-function codificar(a,b){
-	var i = 0, j = 0, r = [], rabc = [], nt = [], v = "AEIOU "
-	var c = b.toUpperCase()
+function ordenar_vocales(dabc){
+	var i = 0, j = 0, rabc = [], v = "AEIOU "
 	var abc = Array(26).fill("").map(x=> String.fromCharCode((97+j++)) ).join("").toUpperCase()
+	var nabc = [...new Set(dabc)].sort().join("")
 	var rev = [...v].map(x=>RegExp(`(.*)(${x})(.*)`,"g"))
-	var nabc = [...new Set(c)].sort().join("")
 	rev.map(x=>(nabc=nabc.replace(rev[i++],"$1$3$2"))&&null)
 	nabc = eval(nabc.replace(new RegExp(`([^${v}]+)([${v}\s]+)`,"g"),"['$1','$2']"))
 	var p = [..."9cfkpuz"].map(x=>parseInt(x,36)-9)
@@ -23,7 +22,13 @@ function codificar(a,b){
 		rabc.push(t?t:"",d?d:"")
 	}
 	rabc = rabc.join("").toUpperCase()
-	var m = [...c].map(x=>nt.push([rabc.indexOf(x),x]))
+	return rabc
+}
+function codificar(a,texto){
+	var i = 0, j = 0, nt = [], v = "AEIOU "
+	var may = texto.toUpperCase()
+	var rabc = ordenar_vocales(may)
+	var m = [...may].map(x=>nt.push([rabc.indexOf(x),x]))
 	var n = [...parseInt(a,3).toString(rabc.length-1)]
 		.map(x=>(10+parseInt(x,36)).toString(36))
 		.join("")
